@@ -1,9 +1,9 @@
-var scores = [78, 87, 98, 70, 68, 13, 53, 76, 47, 87, 99, 100];
-var as = [];
-var bs = [];
-var cs = [];
-var ds = [];
-var fs = [];
+var scores = [78, 87, 98, 70, 68, 13, 53, 76, 47, 87, 99, 100],
+    as = [], 
+    bs = [],
+    cs = [],
+    ds = [],
+    fs = [];
 
 // var highestGrade = scores[0];
 // var lowestGrade = scores[0];
