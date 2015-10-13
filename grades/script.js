@@ -23,12 +23,12 @@ for (var i = 0; i < scores.length; i++) {
     fs.push(score);
   }
 
-  // if (scores[i] > highestGrade) {
-  //   highestGrade = scores[i];
-  // }
-  // if (scores[i] < lowestGrade) {
-  //   lowestGrade = scores[i];
-  // }
+  if (scores[i] > highestGrade) {
+    highestGrade = scores[i];
+  }
+  if (scores[i] < lowestGrade) {
+    lowestGrade = scores[i];
+  }
 
   // //Using switch statements instead of if/else
   // switch (true) {
