@@ -29,6 +29,26 @@ for (var i = 0; i < scores.length; i++) {
   // if (scores[i] < lowestGrade) {
   //   lowestGrade = scores[i];
   // }
+
+  // //Using switch statements instead of if/else
+  // switch (true) {
+  //   case (score < 61):
+  //   fs.push(score);
+  //   break;
+  //   case (score > 60 && score < 71):
+  //   ds.push(score);
+  //   break;
+  //   case (score > 70 && score < 81):
+  //   cs.push(score);
+  //   break;
+  //   case (score > 80 && score < 91):
+  //   bs.push(score);
+  //   break;
+  //   case (score > 90):
+  //   as.push(score);
+  //   break;
+  // }
+
 }
 
 console.log("There are " + as.length + " A's");
