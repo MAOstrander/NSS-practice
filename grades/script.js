@@ -5,9 +5,11 @@ var cs = [];
 var ds = [];
 var fs = [];
 
+// var highestGrade = scores[0];
+// var lowestGrade = scores[0];
+
 for (var i = 0; i < scores.length; i++) {
   var score = scores[i]
-  console.log("Score value:", score);
 
   if (score > 91) {
     as.push(score);
@@ -21,22 +23,11 @@ for (var i = 0; i < scores.length; i++) {
     fs.push(score);
   }
 
-  // switch (planet) {
-  //   case "mercury":
-  //   case "venus":
-  //   case "earth":
-  //   case "mars":
-  //     console.log("rocky planet");
-  //     break;
-  //   case "jupiter":
-  //   case "saturn":
-  //   case "uranus":
-  //   case "neptune":
-  //     console.log("gas planet");
-  //     break;
-  //   default:
-  //     console.log("Out of bounds");
-  //     break;
+  // if (scores[i] > highestGrade) {
+  //   highestGrade = scores[i];
+  // }
+  // if (scores[i] < lowestGrade) {
+  //   lowestGrade = scores[i];
   // }
 }
 
@@ -46,5 +37,8 @@ console.log("There are " + cs.length + " C's");
 console.log("There are " + ds.length + " D's");
 console.log("There are " + fs.length + " F's");
 
-console.log("The highest grade is: ", );
-console.log("The lowest grade is: ", );
+console.log("The highest grade is: ", Math.max.apply(this, scores));
+console.log("The lowest grade is: ", Math.min.apply(this, scores));
+
+// console.log("The highest grade is: ", highestGrade);
+// console.log("The lowest grade is: ", lowestGrade);
