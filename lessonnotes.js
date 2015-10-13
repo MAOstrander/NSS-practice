@@ -17,5 +17,8 @@ for (var i = 0; i < planets.length; i++) {
     case "neptune":
       console.log("gas planet");
       break;
+    default:
+      console.log("Out of bounds");
+      break;
   }
 }
