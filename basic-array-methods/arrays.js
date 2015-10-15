@@ -12,18 +12,29 @@
 */
 
 function reversal(origString) {
-
+	var reversedString = origString.split("").reverse().join("");
+	document.write("<br>")
+	document.write(reversedString)
 }
 
-function alphabits() {
-
+function alphabits(origString) {
+	var sortedString = origString.split("").sort().join("");
+	document.write("<br>")
+	document.write(sortedString)
 }
 
-function palindrome() {
-
+function palindrome(origString) {
+	origString = origString.toLowerCase();
+	var reversedString = origString.split("").reverse().join("");
+	document.write("<br>")
+	if (reversedString === origString) {
+		document.write("true")
+	} else {
+		document.write("false")
+	}
 }
 
-var testString = "";
+var testString = "Racecar";
 reversal(testString);
 alphabits(testString);
 palindrome(testString);
