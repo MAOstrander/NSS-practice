@@ -1,0 +1,122 @@
+.space {
+	background-color: chartreuse;
+	width: 600px;
+	height: 950px;
+}
+
+#triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid red;
+
+	position: fixed;
+	top: 400px;
+	left: 200px;
+}
+
+#wings {
+	border-top: 50px solid red;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 100px;
+
+	position: fixed;
+	top: 450px;
+	left: 175px;
+}
+
+#thrust1 {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 20px solid orange;
+
+	position: fixed;
+	top: 500px;
+	left: 200px;
+}
+
+#thrust2 {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 20px solid orange;
+
+	position: fixed;
+	top: 500px;
+	left: 280px;
+}
+
+
+#star-five {
+   margin: 50px 0;
+   position: relative;
+   display: block;
+   color: white;
+   width: 0px;
+   height: 0px;
+   border-right:  100px solid transparent;
+   border-bottom: 70px  solid white;
+   border-left:   100px solid transparent;
+   -moz-transform:    rotate(35deg);
+   -webkit-transform: rotate(35deg);
+   -ms-transform:     rotate(35deg);
+   -o-transform:      rotate(35deg);
+}
+#star-five:before {
+   border-bottom: 80px solid white;
+   border-left: 30px solid transparent;
+   border-right: 30px solid transparent;
+   position: absolute;
+   height: 0;
+   width: 0;
+   top: -45px;
+   left: -65px;
+   display: block;
+   content: '';
+   -webkit-transform: rotate(-35deg);
+   -moz-transform:    rotate(-35deg);
+   -ms-transform:     rotate(-35deg);
+   -o-transform:      rotate(-35deg);
+
+}
+#star-five:after {
+   position: absolute;
+   display: block;
+   color: white;
+   top: 3px;
+   left: -105px;
+   width: 0px;
+   height: 0px;
+   border-right: 100px solid transparent;
+   border-bottom: 70px solid white;
+   border-left: 100px solid transparent;
+   -webkit-transform: rotate(-70deg);
+   -moz-transform:    rotate(-70deg);
+   -ms-transform:     rotate(-70deg);
+   -o-transform:      rotate(-70deg);
+   content: '';
+}
+
+
+ .animate-star {
+  -webkit-animation-name: drop;
+  -webkit-animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+ 
+ }
+
+@-webkit-keyframes drop {
+  from {top: 0;}
+  to {top: 800px;}
+
+}
+
+
+
