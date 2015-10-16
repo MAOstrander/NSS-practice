@@ -36,8 +36,8 @@ function toCelsius (convertMe) {
     output.className = "normal";
   }
 
-  console.log("Answer in Celsius:", cels);
-  output.innerHTML = cels;
+  // console.log("Answer in Celsius:", cels);
+  output.innerHTML = "Answer in Celsius: " + cels;
 }
 
 function toFahrenheit (convertMe) {
@@ -51,8 +51,8 @@ function toFahrenheit (convertMe) {
     output.className = "normal";
   }
 
-  console.log("Answer in Fahrenheit:", fahr);
-  output.innerHTML = fahr;
+  // console.log("Answer in Fahrenheit:", fahr);
+  output.innerHTML = "Answer in Fahrenheit: " + fahr;
 }
 
 // This function should determine which conversion should happen based on which radio button is selected.
