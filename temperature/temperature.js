@@ -23,23 +23,64 @@
       the converted temperature should be blue.
   9. For any other temperature, the color should be green.
 */
+var output = document.getElementById("output");
+var tempField = document.getElementsByName("temp").item(0);
+console.log("tempField:", tempField);
 
-function toCelsius () {
+function toCelsius (convertMe) {
+  var cels = (convertMe - 32) * 5 / 9;
+  output.innerHTML = cels;
+  console.log("Answer in Celsius:", cels);
 
 }
 
-function toFahrenheit () {
-
+function toFahrenheit (convertMe) {
+  var fahr = (convertMe * 9 / 5) + 32;
+  output.innerHTML = fahr;
+  console.log("Answer in Fahrenheit:", fahr);
 }
-
-// Get a reference to the button element in the DOM
-var button = document.getElementById("converter");
 
 // This function should determine which conversion should
 // happen based on which radio button is selected.
 function determineConverter (clickEvent) {
-  console.log("event", clickEvent);
+  var unit = document.getElementsByName("units");
+  var numberToConvert = tempField.value;
+  console.log("numberToConvert", numberToConvert);
+
+  // for (var i = 0; i < unit.length; i++) {
+  //   console.log(unit.item(i).checked);
+
+    if (unit.item(0).checked) {
+      toCelsius(numberToConvert);
+      console.log("f clicked");
+      
+    } else if (unit.item(1).checked) {
+      toFahrenheit(numberToConvert);
+      console.log("c clicked");
+      
+    } 
+  // }
+
 }
 
+
+function submitWithEnter (keyUpEvent) {
+    console.log("WHATS GOING ON?!", keyUpEvent.keyIdentifier);
+  
+  if (keyUpEvent.keyIdentifier === "Enter") {
+    determineConverter(tempField.value);
+  }
+}
+
+tempField.addEventListener("keyup", submitWithEnter);
+
+
 // Assign a function to be executed when the button is clicked
-button.addEventListener("click", determineConverter);
+var convertButton = document.getElementById("convert")
+convertButton.addEventListener("click", determineConverter);
+
+var clearButton = document.getElementById("clear")
+clearButton.addEventListener("click", function(){
+  document.getElementsByName("temp").item(0).value = "";
+  output.innerHTML = 0;
+});

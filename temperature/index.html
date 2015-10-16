@@ -8,9 +8,32 @@
 
 <body>
 
-<div class="temp">
 
-</div>
+  <fieldset>
+    <legend>Temperature Conversion</legend>
+    <div>
+      <!--  Input a temperature-->
+      <label for="temp">Temperature:</label>
+      <input type="text" name="temp" autofocus>
+    </div>
+    
+      <!--  Radio button elements for fahrenheit or celsius-->
+      <p>Convert from:</p>
+      <input type="radio" name="units" value="f"> Fahrenheit
+      <input type="radio" name="units" value="c"> Celsius
+    
+    <div>
+      <button id="convert">Convert</button>
+      <button id="clear">Clear</button>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Output:</legend>
+    <div id="output">
+    </div>
+  </fieldset> 
+
 
 
   <script type="text/javascript" src="temperature.js"></script>
