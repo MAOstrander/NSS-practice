@@ -24,63 +24,73 @@
   9. For any other temperature, the color should be green.
 */
 var output = document.getElementById("output");
-var tempField = document.getElementsByName("temp").item(0);
-console.log("tempField:", tempField);
 
 function toCelsius (convertMe) {
   var cels = (convertMe - 32) * 5 / 9;
-  output.innerHTML = cels;
-  console.log("Answer in Celsius:", cels);
 
+  if (cels > 32) {
+    output.className = "hot";
+  } else if (cels < 0) {
+    output.className = "cold";
+  } else {
+    output.className = "normal";
+  }
+
+  console.log("Answer in Celsius:", cels);
+  output.innerHTML = cels;
 }
 
 function toFahrenheit (convertMe) {
   var fahr = (convertMe * 9 / 5) + 32;
-  output.innerHTML = fahr;
+
+    if (fahr > 90) {
+    output.className = "hot";
+  } else if (fahr < 32) {
+    output.className = "cold";
+  } else {
+    output.className = "normal";
+  }
+
   console.log("Answer in Fahrenheit:", fahr);
+  output.innerHTML = fahr;
 }
 
-// This function should determine which conversion should
-// happen based on which radio button is selected.
+// This function should determine which conversion should happen based on which radio button is selected.
 function determineConverter (clickEvent) {
   var unit = document.getElementsByName("units");
   var numberToConvert = tempField.value;
-  console.log("numberToConvert", numberToConvert);
 
   // for (var i = 0; i < unit.length; i++) {
   //   console.log(unit.item(i).checked);
 
     if (unit.item(0).checked) {
-      toCelsius(numberToConvert);
-      console.log("f clicked");
-      
+      toCelsius(numberToConvert); 
     } else if (unit.item(1).checked) {
       toFahrenheit(numberToConvert);
-      console.log("c clicked");
-      
     } 
   // }
 
 }
 
-
-function submitWithEnter (keyUpEvent) {
-    console.log("WHATS GOING ON?!", keyUpEvent.keyIdentifier);
-  
+// This function checks what key is being pressed in the input field
+function submitWithEnter (keyUpEvent) {  
   if (keyUpEvent.keyIdentifier === "Enter") {
     determineConverter(tempField.value);
   }
 }
 
+// Runs conversion when you hit enter
+var tempField = document.getElementsByName("temp").item(0);
 tempField.addEventListener("keyup", submitWithEnter);
 
-
-// Assign a function to be executed when the button is clicked
+// Convert Button
 var convertButton = document.getElementById("convert")
 convertButton.addEventListener("click", determineConverter);
 
+// Clear Button
 var clearButton = document.getElementById("clear")
 clearButton.addEventListener("click", function(){
   document.getElementsByName("temp").item(0).value = "";
   output.innerHTML = 0;
+  output.className = "";
 });
