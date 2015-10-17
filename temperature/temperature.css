@@ -1,11 +1,18 @@
 .hot {
-	color: red;
+	background-color: red;
+	color: white;
 }
 
 .cold {
-	color: blue;
+	background-color: blue;
+	color: white;
 }
 
 .normal {
-	color: green;
+	background-color: green;
+	color: white;
+}
+
+div {
+	margin-bottom: 5px;
 }

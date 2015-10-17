@@ -12,29 +12,42 @@
 
   <fieldset>
     <legend>Temperature Conversion</legend>
+      <!--  Input field  -->
     <div>
-      <!--  Input a temperature-->
-      <label for="temp">Temperature:</label>
-      <input type="text" name="temp" autofocus>
+      <label>Number to convert</label>
+      <input type="number" name="toConvert">
     </div>
     
-      <!--  Radio button elements for fahrenheit or celsius-->
-      <p>Convert from:</p>
-      <input type="radio" name="units" value="f"> Fahrenheit
-      <input type="radio" name="units" value="c"> Celsius
-    
+      <!--  Unit type to convert  -->
     <div>
-      <button id="convert">Convert</button>
+      Units:
+      Fahrenheit<input type="radio" name="units" value="f">
+      Celsius<input type="radio" name="units" value="c">
+      Kelvin<input type="radio" name="units" value="k">
+    </div>
+    
+      <!--  Fahrenheit  -->
+    <div>
+      <label for="temp">Fahrenheit</label>
+      <input type="text" name="fanswer" class="right" readonly>
+    </div>
+      <!--  Celsius  -->
+    <div>
+      <label for="temp">Celsius</label>
+      <input type="text" name="canswer" class="right" readonly>
+    </div>
+      <!--  Kelvin  -->
+    <div>
+      <label for="temp">Kelvin</label>
+      <input type="text" name="kanswer" class="right" readonly>
+    </div>
+    
+      <!-- Buttons -->
+    <div>
+      <button id="convert">Convert!</button>
       <button id="clear">Clear</button>
     </div>
   </fieldset>
-
-  <fieldset>
-    <legend>Output:</legend>
-    <div id="output">
-    </div>
-  </fieldset> 
-
 
 
   <script type="text/javascript" src="temperature.js"></script>
