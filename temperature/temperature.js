@@ -76,6 +76,7 @@ function determineConverter (clickEvent) {
 
 // This function checks what key is being pressed in the input field
 function submitWithEnter (keyUpEvent) {  
+  console.log("keyUpEvent", keyUpEvent.keyIdentifier);
   if (keyUpEvent.keyIdentifier === "Enter") {
     determineConverter(this.value);
   }
