@@ -1,3 +1,6 @@
+// This file was supposed to count how many of each grade type there was and display it in the console
+// In addition the highest and lowest grades were to be displayed
+// Two different methods were used, the alternate being commented out but retained for posterity.
 var scores = [78, 87, 98, 70, 68, 13, 53, 76, 47, 87, 99, 100],
   as = [], 
   bs = [],
